@@ -52,7 +52,7 @@ public class Principal {
         filtro.filtra(episodio);
 
         var peliculaDeBruno = new Pelicula();
-        peliculaDeBruno.setNombre("El señor de los anillos");
+        peliculaDeBruno.setNombre("El señor de los anillos las 3 torres");
         peliculaDeBruno.setDuracionEnMinutos(180);
         peliculaDeBruno.setFechaDeLanzamiento(2001);
 
