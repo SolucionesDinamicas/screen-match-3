@@ -12,24 +12,24 @@ public class Principal {
         miPelicula.setNombre("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(180);
-        System.out.println("Duración de la película: " + miPelicula.getDuracionEnMinutos());
+        //System.out.println("Duración de la película: " + miPelicula.getDuracionEnMinutos());
 
-        miPelicula.muestraFichaTecnica();
+        //miPelicula.muestraFichaTecnica();
         miPelicula.evalua(8);
         miPelicula.evalua(5);
         miPelicula.evalua(10);
-        System.out.println("Total de evaluaciones: " + miPelicula.getTotalDeEvaluaciones());
-        System.out.println(miPelicula.calculaMediaEvaluaciones());
+       // System.out.println("Total de evaluaciones: " + miPelicula.getTotalDeEvaluaciones());
+       // System.out.println(miPelicula.calculaMediaEvaluaciones());
 
 
         Serie lost = new Serie();
         lost.setNombre("Lost");
         lost.setFechaDeLanzamiento(2000);
-        lost.muestraFichaTecnica();
+        //lost.muestraFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
-        System.out.println("Duracion de la série: " + lost.getDuracionEnMinutos());
+        //System.out.println("Duracion de la série: " + lost.getDuracionEnMinutos());
 
         Pelicula otraPelicula = new Pelicula();
         otraPelicula.setNombre("Avatar");
@@ -37,10 +37,10 @@ public class Principal {
         otraPelicula.setDuracionEnMinutos(200);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
-        calculadora.incluido(miPelicula);
-        calculadora.incluido(otraPelicula);
-        calculadora.incluido(lost);
-        System.out.println(calculadora.getTiempoTotal());
+        //calculadora.incluido(miPelicula);
+        //calculadora.incluido(otraPelicula);
+        //calculadora.incluido(lost);
+        //System.out.println(calculadora.getTiempoTotal());
 
         FiltroRecomendacion filtro = new FiltroRecomendacion();
         filtro.filtra(miPelicula);
@@ -52,10 +52,11 @@ public class Principal {
         filtro.filtra(episodio);
 
         var peliculaDeBruno = new Pelicula();
-        peliculaDeBruno.setNombre("El señor de los anillos las 3 torres");
+        peliculaDeBruno.setNombre("EL señor de los anillos");
         peliculaDeBruno.setDuracionEnMinutos(180);
         peliculaDeBruno.setFechaDeLanzamiento(2001);
 
+        //Crear un array
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeBruno);
         listaDePeliculas.add(miPelicula);
@@ -65,5 +66,8 @@ public class Principal {
         System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
 
         System.out.println(listaDePeliculas);
+
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
+
     }
 }
