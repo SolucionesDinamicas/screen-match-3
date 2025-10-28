@@ -5,6 +5,8 @@ import com.alura.screenmatch.modelos.Serie;
 import com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+//import java.util.Collection;
+import java.util.Collections;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -25,17 +27,33 @@ public class PrincipalConListas {
 
 //        lista.forEach(Titulo::muestraFichaTecnica);
         //Recorrer cada item de la lista y mostrar el toString
+
         for (Titulo item: lista) {
             System.out.println(item.getNombre());
 
             //Verifica si el item es de tipo(instanceof) película y se castea con la variable pelicula al final
-            if (item instanceof Pelicula pelicula){
+            if (item instanceof Pelicula pelicula && pelicula.getClasificacion() > 2){
             //Casteo de la clase película para que pueda recibir la clase serie como película//Pelicula pelicula = (Pelicula)item;
-                System.out.println(pelicula.getClasificacion());
+                System.out.println("Clasificación; " +  pelicula.getClasificacion());
             }
 
-
-
         }
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Penelope cruz");
+        listaDeArtistas.add("Antonio banderas");
+        listaDeArtistas.add("Ricardo Darin");
+
+        System.out.println("Lista de artistas NO ordenada " + listaDeArtistas);
+
+        //Ordenar una lista con el paquete Colletions
+        Collections.sort(listaDeArtistas);
+
+        System.out.println("Lista de artistas ordenada " + listaDeArtistas);
+
+        //Ordenar títulos
+        Collections.sort(lista);
+        System.out.println("Lista de títulos ordenados: " + lista);
+
+
     }
 }
