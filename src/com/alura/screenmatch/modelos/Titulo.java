@@ -63,6 +63,7 @@ public class Titulo implements Comparable<Titulo>{
         return sumaDeLasEvaluaciones / totalDeEvaluaciones;
     }
 
+    //Método para comparar y poder ordenar Titulo por nombre (compara objetos por nombre).
     @Override
     public int compareTo(Titulo otroTitulo) {
         //Obtenemos el primer nombre y lo comparamos con el nombre del otroTitulo

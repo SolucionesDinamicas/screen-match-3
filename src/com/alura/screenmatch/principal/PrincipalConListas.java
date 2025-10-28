@@ -7,6 +7,8 @@ import com.alura.screenmatch.modelos.Titulo;
 import java.util.ArrayList;
 //import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -14,7 +16,7 @@ public class PrincipalConListas {
         miPelicula.evalua(9);
         Pelicula otraPelicula = new Pelicula("Avatar",2023);
         otraPelicula.evalua(6);
-        var peliculaDeBruno = new Pelicula("EL señor de los anillos",180);
+        var peliculaDeBruno = new Pelicula("EL señor de los anillos",2001);
         peliculaDeBruno.evalua(10);
         Serie lost = new Serie("Lost",2000);
 
@@ -38,7 +40,7 @@ public class PrincipalConListas {
             }
 
         }
-        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        List<String> listaDeArtistas = new ArrayList<>();
         listaDeArtistas.add("Penelope cruz");
         listaDeArtistas.add("Antonio banderas");
         listaDeArtistas.add("Ricardo Darin");
@@ -54,6 +56,11 @@ public class PrincipalConListas {
         Collections.sort(lista);
         System.out.println("Lista de títulos ordenados: " + lista);
 
+        //Al sort le estamos pasando la interfaz Comparator y llamamos el método comparing y sobre comparing
+//        le enviamos la fecha de lazamiento para comparar
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+
+        System.out.println("Ordenado por fecha de lanzamiento: " + lista);
 
     }
 }
