@@ -47,8 +47,11 @@ public class PrincipalConListas {
 
         System.out.println("Lista de artistas NO ordenada " + listaDeArtistas);
 
+
+
         //Ordenar una lista con el paquete Colletions
         Collections.sort(listaDeArtistas);
+
 
         System.out.println("Lista de artistas ordenada " + listaDeArtistas);
 
