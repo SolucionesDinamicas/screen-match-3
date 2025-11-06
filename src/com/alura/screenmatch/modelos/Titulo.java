@@ -3,9 +3,9 @@ import com.alura.screenmatch.excepcion.ErrorEnConversionDeDuracionException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo>{
-    @SerializedName("Title")
+
+    //@SerializedName("Title")  // ya no se usa porque recibimos la clase record para indentificar los campos
     private String nombre;
-    @SerializedName("Year")
     private int fechaDeLanzamiento;
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
@@ -87,8 +87,8 @@ public class Titulo implements Comparable<Titulo>{
 
     @Override
     public String toString() {
-        return "nombre='" + nombre + '\'' +
+        return "(nombre='" + nombre +
                 ", fechaDeLanzamiento=" + fechaDeLanzamiento +
-                ", duración= " + duracionEnMinutos;
+                ", duración= " + duracionEnMinutos+")";
     }
 }
